@@ -86,7 +86,7 @@ h2 { max-width: 16ch; font-size: clamp(2.85rem, 6vw, 5.5rem); }
 .contact button { justify-self: start; border: 1px solid var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
 .contact button:focus-visible { outline-color: var(--text); }
 .about-page { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
-.about-page h1 { max-width: 17ch; font-size: clamp(3rem, 7vw, 6rem); }
+.about-page h1 { font-size: min(4.3vw, 4.75rem); white-space: nowrap; }
 .about-page p { max-width: 64ch; margin-block: 1.4rem 2rem; font-size: 1.125rem; }
 .about-page img { width: min(100%, 64rem); height: auto; border-radius: .75rem; }
 .composition { max-width: 68ch; margin-top: 2.5rem; }

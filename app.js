@@ -9,7 +9,6 @@ try {
 
 function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
-    themeToggle.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
 }
 
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
