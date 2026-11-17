@@ -41,26 +41,23 @@ nav { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.25rem; 
 .theme-toggle { padding: .35rem .85rem; border: 1px solid #f7f4eb75; border-radius: 3rem; background: transparent; color: inherit; font: inherit; cursor: pointer; }
 .theme-toggle:hover, .theme-toggle:focus-visible { border-color: var(--salmon); }
 
-.hero { background: var(--forest); color: var(--paper); }
-.hero-layout { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: clamp(2rem, 6vw, 7rem); padding-block: clamp(3.5rem, 8vw, 7rem); }
+.hero {
+    background: var(--forest);
+    background-image: linear-gradient(90deg, #0b211df5 0%, #0b211ddb 32%, #0b211d20 70%), url("assets/salmon-run.png");
+    background-position: center 44%;
+    background-size: cover;
+    color: var(--paper);
+}
+.hero-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 1.5rem; padding-block: clamp(3.5rem, 8vw, 7rem); }
+.hero-logo { width: clamp(9rem, 20vw, 17rem); height: auto; justify-self: end; filter: drop-shadow(0 .3rem .75rem #0b211d99); }
 .status { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.65rem; color: var(--salmon); font-size: .78rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .status::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: currentColor; }
-h1 { max-width: 8ch; font-size: clamp(4rem, 8.4vw, 8rem); }
+h1 { font-size: clamp(2.35rem, 5.5vw, 6rem); overflow-wrap: anywhere; }
 h1 span { display: block; margin-bottom: .25em; color: var(--mint); font-size: .43em; }
 .hero-intro { max-width: 30ch; margin-block: 1.6rem 1.9rem; color: var(--mint); font-size: clamp(1.125rem, 2vw, 1.35rem); }
 .button { display: inline-flex; align-items: center; gap: 1.25rem; padding: .75rem 1.1rem; border-radius: 3rem; background: var(--salmon); color: var(--forest); font-weight: 700; text-decoration: none; }
 .button:hover { background: var(--paper); }
 .button:focus-visible { outline-color: var(--paper); }
-.hero-art {
-    display: grid;
-    place-items: center;
-    aspect-ratio: 1;
-    border: 1px solid #f7f4eb40;
-    border-radius: 50%;
-    background: repeating-radial-gradient(circle, transparent 0 24px, #f7f4eb19 25px 26px);
-}
-.emblem { position: relative; width: 74%; aspect-ratio: 1; overflow: hidden; border-radius: 50%; background: white; }
-.emblem img { position: absolute; width: 360%; max-width: none; height: auto; left: -131%; top: -47%; }
 
 .vision { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
 .vision-intro { display: grid; grid-template-columns: 1.15fr 1fr; align-items: end; gap: 1.5rem 4rem; margin-bottom: 2.75rem; }
@@ -72,17 +69,39 @@ h2 { max-width: 16ch; font-size: clamp(2.85rem, 6vw, 5.5rem); }
 .pillars h3 { margin: 1.05rem 0 .35rem; font-size: 1.15rem; line-height: 1.25; }
 .footer-inner { padding-block: 1.4rem; }
 .footer-copyright { margin-right: auto; font-size: 15px; }
+.contact { border-top: 1px solid #658277; padding-block: clamp(3rem, 6vw, 5rem); }
+.contact form { display: grid; gap: 1rem; max-width: 38rem; margin-top: 1.5rem; }
+.contact label { display: grid; gap: .25rem; font-weight: 600; }
+.contact input, .contact textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    border: 1px solid #658277;
+    border-radius: .35rem;
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    font-weight: 400;
+}
+.contact textarea { resize: vertical; }
+.contact button { justify-self: start; border: 1px solid var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.contact button:focus-visible { outline-color: var(--text); }
 .about-page { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
 .about-page h1 { max-width: 17ch; font-size: clamp(3rem, 7vw, 6rem); }
 .about-page p { max-width: 64ch; margin-block: 1.4rem 2rem; font-size: 1.125rem; }
 .about-page img { width: min(100%, 64rem); height: auto; border-radius: .75rem; }
 
 @media (max-width: 46rem) {
-    .hero-layout, .vision-intro, .pillars { grid-template-columns: 1fr; }
-    .hero-art { width: min(100%, 24rem); justify-self: center; }
+    .hero {
+        background-image: linear-gradient(#0b211d40, #0b211ddf 43%, #0b211df5 83%), url("assets/salmon-run.png");
+        background-position: 65% center;
+    }
+    .hero-layout { grid-template-columns: 1fr; }
+    .hero-logo { grid-row: 1; justify-self: start; }
+    .hero-copy { text-shadow: 0 1px 8px #0b211d; }
+    .hero-copy .button { text-shadow: none; }
+    .vision-intro, .pillars { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 24rem) {
     .wrap { width: calc(100% - 2rem); }
-    h1 { font-size: clamp(3rem, 15vw, 4rem); }
 }

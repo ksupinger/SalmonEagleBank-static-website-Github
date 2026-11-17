@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Salmon Eagle Bank is a coming-soon bank by the People Of The Salmon, envisioned for Indigenous Nations across Turtle Island (Kanatan).">
+    <meta name="description" content="SalmonEagleBank is a coming-soon bank by the People Of The Salmon, envisioned for Indigenous Nations across Turtle Island (Kanatan).">
     <meta name="theme-color" content="#102a25">
-    <title>Salmon Eagle Bank | Coming Soon</title>
+    <title>SalmonEagleBank | Coming Soon</title>
     <link rel="icon" type="image/png" href="assets/SalmonEagleBankLogoTrans64x64.png">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
@@ -15,11 +15,12 @@
         <div class="wrap header-inner">
             <a class="brand" href="#top">
                 <img src="assets/SalmonEagleBankLogoTrans64x64.png" width="48" height="48" alt="">
-                <span>Salmon Eagle Bank</span>
+                <span>SalmonEagleBank&trade;</span>
             </a>
             <nav aria-label="Main navigation">
                 <a href="#sovereignty">Our vision <span aria-hidden="true">↗</span></a>
                 <a href="About.html">About</a>
+                <a href="https://peoplesofthesalmon.org/">PeoplesOfTheSalmon.org</a>
                 <button class="theme-toggle" type="button" hidden>Dark mode</button>
             </nav>
         </div>
@@ -30,22 +31,18 @@
             <div class="wrap hero-layout">
                 <div class="hero-copy">
                     <p class="status">Coming soon</p>
-                    <h1 id="welcome"><span>Welcome to the</span> Salmon Eagle Bank</h1>
+                    <h1 id="welcome"><span>Welcome to the</span> SalmonEagleBank&trade;</h1>
                     <p class="hero-intro">A new bank by the People Of The Salmon for the sovereign peoples.</p>
                     <a class="button" href="#sovereignty">Explore our vision <span aria-hidden="true">↓</span></a>
                 </div>
-                <div class="hero-art">
-                    <div class="emblem">
-                        <img src="assets/B2C_PeoplesOfTheSalmon.jpg" width="1920" height="1080" alt="Peoples of the Salmon emblem by Bradley Hunt, Heiltsuk Nation">
-                    </div>
-                </div>
+                <img class="hero-logo" src="assets/SalmonEagleBankLogoTrans24.png" width="500" height="500" alt="">
             </div>
         </section>
 
         <section class="vision wrap" id="sovereignty" aria-labelledby="vision-heading">
             <div class="vision-intro">
                 <h2 id="vision-heading">Financial Sovereignty for Indigenous Nations</h2>
-                <p>Salmon Eagle Bank is envisioned as a crypto-friendly sovereign bank serving all tribes of Turtle Island (Kanatan), with global multi-currency support and modern digital banking services.</p>
+                <p>SalmonEagleBank is envisioned as a crypto-friendly sovereign bank serving all tribes of Turtle Island (Kanatan), with global multi-currency support and modern digital banking services.</p>
             </div>
             <ul class="pillars">
                 <li>
@@ -65,15 +62,35 @@
                 </li>
             </ul>
         </section>
+        <section class="wrap contact" id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact us</h2>
+            <form id="contact-form" action="mailto:popis@salmoneaglebank.com" method="post" enctype="text/plain">
+                <label>Your name
+                    <input name="name" autocomplete="name" maxlength="100" required>
+                </label>
+                <label>Email address
+                    <input name="email" type="email" autocomplete="email" maxlength="254" required>
+                </label>
+                <label>Subject
+                    <input name="subject" maxlength="150" required>
+                </label>
+                <label>Message
+                    <textarea name="message" rows="5" maxlength="4000" required></textarea>
+                </label>
+                <button class="button" type="submit" aria-describedby="contact-note">Send</button>
+                <p id="contact-note">Opens a draft in your email app for you to review and send.</p>
+            </form>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="wrap footer-inner">
             <a class="brand" href="#top">
                 <img src="assets/SalmonEagleBankLogoTrans64x64.png" width="40" height="40" alt="">
-                <span>Salmon Eagle Bank</span>
+                <span>SalmonEagleBank&trade;</span>
             </a>
-            <p class="footer-copyright">CopyRight (C) 2026 SalmonEagleBank - all rights reserved</p>
+            <p class="footer-copyright">CopyRight (C) 2026 SalmonEagleBank&trade; - all rights reserved</p>
+            <a href="https://peoplesofthesalmon.org/">PeoplesOfTheSalmon.org</a>
             <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
         </div>
     </footer>

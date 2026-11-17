@@ -25,3 +25,18 @@ themeToggle.addEventListener('click', () => {
         // The selected theme remains active on this page.
     }
 });
+
+const contactForm = document.querySelector('#contact-form');
+contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const fields = new FormData(contactForm);
+    const subject = fields.get('subject').trim();
+    const body = [
+        'Name: ' + fields.get('name').trim(),
+        'Email: ' + fields.get('email').trim(),
+        '',
+        fields.get('message').trim(),
+    ].join('\r\n');
+    window.location.href = contactForm.action + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+});
