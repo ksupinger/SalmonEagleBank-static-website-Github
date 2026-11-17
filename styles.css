@@ -89,6 +89,11 @@ h2 { max-width: 16ch; font-size: clamp(2.85rem, 6vw, 5.5rem); }
 .about-page h1 { max-width: 17ch; font-size: clamp(3rem, 7vw, 6rem); }
 .about-page p { max-width: 64ch; margin-block: 1.4rem 2rem; font-size: 1.125rem; }
 .about-page img { width: min(100%, 64rem); height: auto; border-radius: .75rem; }
+.composition { max-width: 68ch; margin-top: 2.5rem; }
+.composition ul { padding-inline-start: 1.5rem; }
+.composition li + li { margin-top: .5rem; }
+.composition h2, .logo-examples-heading { max-width: none; font-size: clamp(2rem, 4vw, 3rem); }
+.logo-examples-heading { margin-bottom: 1rem; }
 
 @media (max-width: 46rem) {
     .hero {
