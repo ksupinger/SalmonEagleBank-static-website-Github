@@ -53,6 +53,9 @@ nav { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.25rem; 
 .status { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.65rem; color: var(--salmon); font-size: .78rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .status::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: currentColor; }
 h1 { font-size: clamp(2.35rem, 5.5vw, 6rem); overflow-wrap: anywhere; }
+@media (min-width: 46.001rem) {
+    .hero h1 { font-size: clamp(2.35rem, 3.7vw, 4.25rem); }
+}
 h1 span { display: block; margin-bottom: .25em; color: var(--mint); font-size: .43em; }
 .hero-intro { max-width: 30ch; margin-block: 1.6rem 1.9rem; color: var(--mint); font-size: clamp(1.125rem, 2vw, 1.35rem); }
 .button { display: inline-flex; align-items: center; gap: 1.25rem; padding: .75rem 1.1rem; border-radius: 3rem; background: var(--salmon); color: var(--forest); font-weight: 700; text-decoration: none; }
